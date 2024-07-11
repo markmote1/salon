@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Salon</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        
+            <div>
+                <a href="index.html" class="homelogo">
+                    <img src="images/back.jpg" alt="My Salon Logo" class="logo">
+                </a>
+                
+            </div>
+        <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                
+                <li><a href="#popupForm" onclick="openPopup(event)" class="book-button">Book with Us</a></li>
+                
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+
+   
+
+  
+
+
+
+    <section id="welcome">
+        <div class="container">
+            <h2>Your Oasis of Beauty</h2>
+            <p>Welcome to My Salon, where beauty meets perfection. Our goal is to help you look and feel your best. We offer a wide range of services, from haircuts and coloring to manicures, pedicures, and facials. Our skilled and friendly staff use high-quality products to ensure you get the best results. Whether you're preparing for a special event or just want to treat yourself, we're here to make you feel pampered and relaxed. Visit us and experience a place where your beauty and comfort are our top priorities.</p>
+            <a href="services.html" class="btn">EXPLORE OUR SERVICES</a>
+        </div>
+    </section>
+    
+
+    <section id="highlights">
+        <div class="container">
+            <h2>Featured Services</h2>
+            <ul>
+                <li>
+                    <a href="#" onclick="openPopup(event)" class="service-link">
+                        <img src="images/haircut.jpg" alt="Haircut" class="service-image">
+                        <span>Haircuts</span>
+                        <div class="hover-text">Book with us</div>
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a href="#" onclick="openPopup(event)" class="service-link">
+                        <img src="images/haircolor.jpg" alt="Hair Coloring" class="service-image">
+                        <span>Hair Coloring</span>
+                        <div class="hover-text">Book with us</div>
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a href="#" onclick="openPopup(event)" class="service-link">
+                        <img src="images/manicure.jpg" alt="Manicure/Pedicure" class="service-image">
+                        <span>Manicure/Pedicure</span>
+                        <div class="hover-text">Book with us</div>
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a href="#popupForm" onclick="openPopup(event)" class="service-link">
+                        <img src="images/facials.jpg" alt="Facials" class="service-image">
+                        <span>Facials</span>
+                        <div class="hover-text">Book with us</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+     <!-- Popup Form -->
+<div id="popupForm" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>Book a Service</h2>
+        <form action="submit_booking.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="popup-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="popup-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="popup-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Select Service:</label>
+                <select id="popup-service" name="service" required>
+                    <option value="haircut">Haircut</option>
+                    <option value="hair-coloring">Hair Coloring</option>
+                    <option value="manicure-pedicure">Manicure/Pedicure</option>
+                    <option value="facials">Facials</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="popup-date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="popup-time" name="time" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Book Now</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-wrapper">
+                <div class="testimonial active">
+                    <p style="color: aqua;">"The service at My Salon is exceptional. I always leave feeling rejuvenated and beautiful!"</p>
+                    <span>- Jessica M.</span>
+                </div>
+                <div class="testimonial">
+                    <p style="color: aqua;">"I love coming to My Salon. The staff are friendly and the services are top-notch. Highly recommend!"</p>
+                    <span>- Sarah K.</span>
+                </div>
+                <div class="testimonial">
+                    <p style="color: aqua;">"My Salon always provides excellent service. The atmosphere is relaxing and the results are amazing."</p>
+                    <span>- David L.</span>
+                </div>
+                <div class="testimonial">
+                    <p style="color: aqua;">"A wonderful experience every time! The facials are incredibly refreshing and the staff is fantastic."</p>
+                    <span>- Emily R.</span>
+                </div>
+            </div>
+            <button class="prev-btn" onclick="prevTestimonial()">&#10094;</button>
+            <button class="next-btn" onclick="nextTestimonial()">&#10095;</button>
+        </div>
+    </section>
+    
+    
+    
+             
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook" class="social-icon"></a></li>
+                <li><a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a></li>
+                <li><a href="https://www.twitter.com"><img src="images/twitter.png" alt="Twitter" class="social-icon"></a></li>
+            </ul>
+            <p style="color: white;">&copy; 2024 Mark Mote. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <form action="submit_booking.php" method="POST">
+
+    
+</body>
+</html>
